@@ -1,0 +1,14 @@
+<?php
+//    $this->helper('Blog\Demo\Helper\SetConfig')->setConfig(0);
+?>
+<div class="content">
+    <h2>Website cookie lifetime: </h2>
+    <h3><?=$moduleStatus = $this->helper('Magenest\Demo\Helper\ReadConfig')->getConfig('web/cookie/cookie_lifetime');?></h3>
+</div>
+<div class="input-form">
+    <form action="<?=$this->getUrl('demo/result')?>" method="POST">
+        <label for="demo-input">Change cookie lifetime</label>
+        <input class="input-text" type="number" name="demo-input" id="demo-input" />
+        <button class="action submit primary" type="submit">Change</button>
+    </form>
+</div>
